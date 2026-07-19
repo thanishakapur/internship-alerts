@@ -9,8 +9,8 @@ import requests
 # 1. Targeting Configuration
 TARGET_KEYWORDS = ["data science", "product manager", "quant", "forward deployed", "operations", "pm", "data analyst"]
 GRAD_YEARS = ["2027", "2028", "2029"]
-EMAIL_SENDER = "your-email@gmail.com"  # Change to your personal configuration email
-EMAIL_RECEIVER = "your-email@gmail.com"  # Your destination email inbox
+EMAIL_SENDER = "thanishakapur1@gmail.com"  # Change to your personal configuration email
+EMAIL_RECEIVER = "thanishakapur1@gmail.com"  # Your destination email inbox
 EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 
 # Trusted Infrastructure Sources
