@@ -1,0 +1,33 @@
+name: Daily Internship Alert
+on:
+  schedule:
+    - cron: '0 12 * * *' # Triggers at 8:00 AM EST every single morning
+  workflow_dispatch: # Allows manual force runs via the UI dashboard
+
+jobs:
+  check-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Execute Check Script
+        env:
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        run: python tracker.py
+
+      - name: Commit and Save History Updates
+        run: |
+          git config --global user.name "InternshipBot"
+          git config --global user.email "bot@github.com"
+          git add history.json || true
+          git commit -m "Update automated security tracking log database" || true
+          git push || true
