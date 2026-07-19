@@ -12,7 +12,7 @@ GRAD_YEARS = ["2027", "2028", "2029"]
 EMAIL_SENDER = "thanishakapur1@gmail.com"
 
 # Sources tracking Summer 2027 Roles (Updated to CDN domains to bypass GitHub internal DNS errors)
-SOURCES = [
+GITHUB_SOURCES = [
     "https://jsdelivr.net",
     "https://jsdelivr.net",
     "https://jsdelivr.net"
