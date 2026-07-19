@@ -7,11 +7,9 @@ from email.mime.multipart import MIMEMultipart
 import requests
 
 # 1. Targeting Configuration
-TARGET_KEYWORDS = ["data science", "product manager", "quant", "forward deployed", "operations", "pm", "data analyst"]
+TARGET_KEYWORDS = ["data science", "business analyst", "consulting", "economic", "finance", "python", "sql", "azure", "product manager", "quant", "forward deployed", "operations", "pm", "data analyst"]
 GRAD_YEARS = ["2027", "2028", "2029"]
-EMAIL_SENDER = "thanishakapur1@gmail.com"  # Change to your personal configuration email
-EMAIL_RECEIVER = "thanishakapur1@gmail.com"  # Your destination email inbox
-EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
+EMAIL_SENDER = "thanishakapur1@gmail.com"
 
 # Trusted Infrastructure Sources
 GITHUB_SOURCES = [

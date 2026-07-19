@@ -1,12 +1,15 @@
 name: Daily Internship Alert
 on:
   schedule:
-    - cron: '0 12 * * *' # Triggers automatically at 8:00 AM EST every single morning
+    - cron: '0 12 * * *' # Triggers at 8:00 AM EST every single morning
   workflow_dispatch: # Allows manual force runs via the UI dashboard
 
 jobs:
   check-jobs:
     runs-on: ubuntu-latest
+    # ⚠️ THIS FIXES THE CONNECTION ERROR: Grants explicit write/network privileges
+    permissions:
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -17,7 +20,9 @@ jobs:
           python-version: '3.10'
 
       - name: Install Dependencies
-        run: pip install requests
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
       - name: Execute Check Script
         env:
