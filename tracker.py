@@ -11,11 +11,11 @@ TARGET_KEYWORDS = ["data science", "business analyst", "consulting", "economic",
 GRAD_YEARS = ["2027", "2028", "2029"]
 EMAIL_SENDER = "thanishakapur1@gmail.com"
 
-# Trusted Infrastructure Sources
-GITHUB_SOURCES = [
-    "https://githubusercontent.com",
-    "https://githubusercontent.com",
-    "https://githubusercontent.com"
+# Sources tracking Summer 2027 Roles (Updated to CDN domains to bypass GitHub internal DNS errors)
+SOURCES = [
+    "https://jsdelivr.net",
+    "https://jsdelivr.net",
+    "https://jsdelivr.net"
 ]
 
 def assess_risk(company, url):
