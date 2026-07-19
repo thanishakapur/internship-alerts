@@ -1,7 +1,7 @@
 name: Daily Internship Alert
 on:
   schedule:
-    - cron: '0 12 * * *' # Triggers at 8:00 AM EST every single morning
+    - cron: '0 12 * * *' # Triggers automatically at 8:00 AM EST every single morning
   workflow_dispatch: # Allows manual force runs via the UI dashboard
 
 jobs:
